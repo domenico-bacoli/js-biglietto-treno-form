@@ -9,17 +9,71 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <label for="user-name-surname">Nome Cognome</label>
-    <input id="user-name-surname" type="text">
 
-    <label for="user-trip-km">Km da percorrere</label>
-    <input id="user-trip-km" type="number">
+    <div class="container-centered">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <section class="ticket-calculate">
+            
+            <div class="form-container">
+                <div class="form-ticket">
+                    <div class="form-ticket-label">
+                        <label for="user-name-surname">Nome Cognome</label>
+                    </div>
+                    <div class="form-input">
+                        <input id="user-name-surname" type="text">
+                    </div>
+                </div>
 
-    <label for="user-age">età</label>
-    <input id="user-age" type="number">
+                <div class="form-ticket">
+                    <div class="form-ticket-label">
+                        <label for="user-trip-km">Km da percorrere</label>
+                    </div>
+                    <div class="form-input">
+                        <input id="user-trip-km" type="number">
+                    </div>  
+                </div>  
+                <div class="form-ticket">
+                    <div class="form-ticket-label">
+                        <label for="user-age">Età</label>
+                    </div>
+                    <div class="form-input">
+                        <input id="user-age" type="number">
+                    </div>
+                </div>
+            </div>
+            <div class="btn button-generate">
+                <button id="user-generate">Genera</button>
+            </div>    
+        </section> 
 
-    <button id="user-generate">Genera</button>
+        <section class="ticket-generated">
+            <h2>IL TUO BIGLIETTO</h2>
+            <div class="ticket-container">
+                <div class="left-side">
+                    <div class="passenger-name">
+                        <h3>NOME DEL PASSEGGERO</h3>
+                        <div id="name-surname-generated"></div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="offer">
+                        <h4>Offerta</h4>
+                        <div id="offer-generated"></div>
+                    </div>
+                    <div class="carriage">
+                        <h4>Carrozza</h4>
+                        <div>10</div>
+                    </div>
+                    <div class="ticket-cost">
+                        <h4>Costo Biglietto</h4>
+                        <div id="ticket-cost-generated"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>

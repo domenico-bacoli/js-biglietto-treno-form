@@ -12,7 +12,6 @@
 - formatta il ticketPrice con due decimali 
 */
 
-
 // - chiedi all'utente nome e cognome e memorizzalo
 let userNameSurnameEl = document.getElementById("user-name-surname");
 
@@ -30,22 +29,33 @@ let ticketPrice;
 //prendo il button #user-generate
 let userGenerateEl = document.getElementById("user-generate");
 
+//prendo i campi Nome Cognome, Offerta, costo biglietto
+let nameSurnameEl = document.getElementById("name-surname-generated");
+let offerEl = document.getElementById("offer-generated");
+let ticketCostEl = document.getElementById("ticket-cost-generated");
+let ticketGeneratedEl = document.querySelector(".ticket-generated");
+
 // aggiungo un evento al click del button #user-generate
 userGenerateEl.addEventListener("click", function(){
 
 if (userAgeEl.value < 18) {
     discount20 = ( userTripKmEl.value * priceKm ) / 100 * 20;
     ticketPrice = userTripKmEl.value * priceKm - discount20;
+    offerEl.innerHTML = "Sconto 20%";
     
 } else if (userAgeEl.value >= 65) {
     discount40 = ( userTripKmEl.value * priceKm ) / 100 * 40;
     ticketPrice = userTripKmEl.value * priceKm - discount40;
-        
+    offerEl.innerHTML = "Sconto 40%";
+
 } else {
     ticketPrice = userTripKmEl.value * priceKm;
+    offerEl.innerHTML = "Biglietto Standard";
 }
 
-console.log(ticketPrice.toFixed(2));
+ticketCostEl.innerHTML = ticketPrice.toFixed(2) + "€";
+ticketGeneratedEl.style.display = "block";
+nameSurnameEl.innerHTML = userNameSurnameEl.value;
 
 });
 
