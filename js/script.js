@@ -26,8 +26,9 @@ const priceKm = 0.21;
 
 let ticketPrice;
 
-//prendo il button #user-generate
+//prendo il button #user-generate, #user-reset
 let userGenerateEl = document.getElementById("user-generate");
+let userResetEl = document.getElementById("user-reset");
 
 //prendo i campi Nome Cognome, Offerta, costo biglietto
 let nameSurnameEl = document.getElementById("name-surname-generated");
@@ -58,6 +59,15 @@ ticketGeneratedEl.style.display = "block";
 nameSurnameEl.innerHTML = userNameSurnameEl.value;
 
 });
+
+userResetEl.addEventListener("click", function() {
+    userNameSurnameEl.value = "";
+    userTripKmEl.value = "";
+    userAgeEl.value = "";
+    ticketGeneratedEl.style.display = "none";
+})
+
+
 
 
 
