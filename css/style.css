@@ -16,7 +16,6 @@ body{
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
-
 }
 
 h1, h2{
@@ -57,8 +56,6 @@ h1, h2{
     gap: 20px;
     padding-top: 40px;
 }
-
-
 
 .ticket-calculate .button-generate button{
     background-color: rgb(255, 255, 255);

@@ -30,9 +30,10 @@ let ticketPrice;
 let userGenerateEl = document.getElementById("user-generate");
 let userResetEl = document.getElementById("user-reset");
 
-//prendo i campi Nome Cognome, Offerta, costo biglietto
+//prendo i campi Nome Cognome, Offerta, Carrozza, costo biglietto
 let nameSurnameEl = document.getElementById("name-surname-generated");
 let offerEl = document.getElementById("offer-generated");
+let carriageEl = document.getElementById("carriage-generated");
 let ticketCostEl = document.getElementById("ticket-cost-generated");
 let ticketGeneratedEl = document.querySelector(".ticket-generated");
 
@@ -57,6 +58,7 @@ if (userAgeEl.value < 18) {
 ticketCostEl.innerHTML = ticketPrice.toFixed(2) + "€";
 ticketGeneratedEl.style.display = "block";
 nameSurnameEl.innerHTML = userNameSurnameEl.value;
+carriageEl.innerHTML = Math.floor( (Math.random() * 10 ) + 1 );
 
 });
 
